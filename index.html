@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comet — X-Lows: To The Moon</title>
+  <meta name="description" content="The X-Lows in Blue Ice. Comet's moon-themed drop. One small step for sneakers." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fixed HUD chrome -->
+  <nav class="hud">
+    <span class="hud-brand">COMET <span class="dim">✦</span> X-LOWS</span>
+    <div class="hud-nav">
+      <a href="#launch" class="hud-nav-link">Launch</a>
+      <a href="#descent" class="hud-nav-link">Descent</a>
+      <a href="#moonwalk" class="hud-nav-link">Moonwalk</a>
+      <a href="#details" class="hud-nav-link">Details</a>
+      <a href="#explore" class="hud-nav-link">Explore</a>
+      <a href="#gravity" class="hud-nav-link">Gravity</a>
+      <a href="#get-them" class="hud-nav-link">Get Them</a>
+    </div>
+  </nav>
+
+  <!-- ============ SECTION 1: LAUNCH (scroll-cinematic, orbit) ============ -->
+  <section class="cinematic" id="launch">
+    <div class="sticky">
+      <div class="preloader">
+        <div class="preloader-bar"><div class="preloader-fill"></div></div>
+        <span class="preloader-text">PRE-FLIGHT 0%</span>
+      </div>
+      <canvas></canvas>
+      <div class="vignette"></div>
+
+      <div class="overlay">
+        <h1 class="reveal-line" data-in="0.00" data-out="0.30">TO THE MOON.</h1>
+        <h1 class="reveal-line" data-in="0.34" data-out="0.64">THE X-LOWS · BLUE ICE</h1>
+        <h1 class="reveal-line" data-in="0.70" data-out="1.30">HELLO, COMETEER.</h1>
+      </div>
+
+      <div class="telemetry tl">COMET <b>NEW LAUNCH</b></div>
+      <div class="telemetry tr">ORBIT NOMINAL</div>
+      <div class="telemetry bl" data-frame-readout>FRAME 000 / 000</div>
+      <div class="telemetry br">SEQ 001 · LUNAR</div>
+
+      <div class="progress"><div class="progress-fill"></div></div>
+      <div class="scroll-hint">SCROLL ▾</div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2: DESCENT (scroll-cinematic, descent) ============ -->
+  <section class="cinematic" id="descent">
+    <div class="sticky">
+      <canvas></canvas>
+      <div class="vignette"></div>
+
+      <div class="overlay">
+        <h1 class="reveal-line" data-in="0.00" data-out="0.35">ONE SMALL STEP FOR SNEAKERS.</h1>
+        <h1 class="reveal-line" data-in="0.40" data-out="0.72">BUILT FOR THE COMETEERS.</h1>
+        <h1 class="reveal-line" data-in="0.78" data-out="1.30">TOUCHDOWN.</h1>
+      </div>
+
+      <div class="telemetry tl">DESCENT <b>ENGAGED</b></div>
+      <div class="telemetry tr">DUST LEVEL LOW</div>
+      <div class="telemetry bl" data-frame-readout>FRAME 000 / 000</div>
+      <div class="telemetry br">SEQ 002 · SURFACE</div>
+
+      <div class="progress"><div class="progress-fill"></div></div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3: MOONWALK (scroll-world, procedural) ============ -->
+  <section class="world" id="moonwalk">
+    <div class="sticky">
+      <canvas></canvas>
+      <div class="vignette"></div>
+
+      <div class="overlay">
+        <h1 class="reveal-line" data-in="0.00" data-out="0.32">EVERY STEP, A SMALL LEAP.</h1>
+        <h1 class="reveal-line" data-in="0.36" data-out="0.66">CUSHIONING TUNED FOR FLOAT.</h1>
+        <h1 class="reveal-line" data-in="0.72" data-out="1.30">GRIP THAT HOLDS IN ANY CRATER.</h1>
+      </div>
+
+      <div class="telemetry tl">EVA <b>MOONWALK</b></div>
+      <div class="telemetry tr">GRAVITY 0.16G</div>
+      <div class="telemetry br">SEQ 003 · TERRAIN</div>
+
+      <div class="progress"><div class="progress-fill"></div></div>
+    </div>
+  </section>
+  <!-- ============ SECTION 4: DETAILS (hybrid-2d3d, editorial) ============ -->
+  <section class="hybrid" id="details">
+    <div class="hybrid-grid">
+      <div class="hybrid-copy">
+        <div class="hybrid-kicker reveal">NEW LAUNCH · THE DROP</div>
+        <h2 class="reveal">X-LOWS: TO THE MOON</h2>
+        <p class="reveal">Blue Ice. A colorway pulled straight off the lunar morning —
+          icy suede, crisp mesh, gum-cream sole. One silhouette, tuned for the
+          Cometeers who never stopped looking up. ₹5,899 MRP, taxes on us to carry.</p>
+        <div class="stats">
+          <div class="stat"><span class="stat-num" data-count="40" data-suffix="+">0</span><span class="stat-label">COLORWAYS</span></div>
+          <div class="stat"><span class="stat-num" data-count="10" data-suffix="">0</span><span class="stat-label">UK SIZES 3–12</span></div>
+          <div class="stat"><span class="stat-num" data-count="16" data-suffix="% G">0</span><span class="stat-label">FEELS LIKE</span></div>
+        </div>
+        <p class="reveal" style="margin-top:24px">Runs in the same family as the rest of the cosmos:</p>
+        <div class="chips reveal">
+          <span class="chip active">BLUE ICE</span>
+          <span class="chip">MOONSHADOW</span>
+          <span class="chip">NEPTUNE</span>
+          <span class="chip">STARBURST</span>
+          <span class="chip">ARMSTRONG</span>
+        </div>
+      </div>
+      <div class="hybrid-stage"><canvas></canvas></div>
+    </div>
+  </section>
+  <!-- ============ SECTION 5: EXPLORE (click-navigate, waypoints) ============ -->
+  <section class="explore" id="explore">
+    <div class="sticky">
+      <canvas></canvas>
+      <div class="vignette"></div>
+
+      <div class="explore-title">TOUR THE X-LOW</div>
+      <div class="hotspots">
+        <button class="hotspot" data-waypoint="0" style="--hx:26%; --hy:40%">UPPER</button>
+        <button class="hotspot" data-waypoint="1" style="--hx:50%; --hy:26%">LACES</button>
+        <button class="hotspot" data-waypoint="2" style="--hx:50%; --hy:76%">SOLE</button>
+        <button class="hotspot" data-waypoint="3" style="--hx:74%; --hy:40%">HEEL</button>
+      </div>
+      <p class="explore-caption"></p>
+    </div>
+  </section>
+  <!-- ============ SECTION 6: GRAVITY (physics-play, low-gravity) ============ -->
+  <section class="physics" id="gravity">
+    <div class="sticky">
+      <canvas></canvas>
+
+      <div class="physics-copy">
+        <div class="physics-kicker">THE GRAVITY ROOM</div>
+        <h2>THROW A SHOE.</h2>
+        <p>It comes down slower here. 1/6th gravity, zero consequences.</p>
+      </div>
+      <div class="physics-hint">DRAG &amp; RELEASE TO THROW ✦ G = 1.62 m/s²</div>
+    </div>
+  </section>
+  <!-- ============ SECTION 7: GET THEM (cursor-trail, stardust CTA) ============ -->
+  <section class="trail" id="get-them">
+    <div class="sticky">
+      <canvas></canvas>
+      <div class="vignette"></div>
+
+      <div class="trail-cta">
+        <h2 class="reveal">GET THEM.</h2>
+        <p class="sub reveal">X-LOWS "TO THE MOON" · BLUE ICE · ₹5,899 · UK 3–12</p>
+        <a class="cta-btn reveal" href="https://www.wearcomet.com/products/x-lows-to-the-moon" target="_blank" rel="noopener">TAKE ME THERE ✦</a>
+        <div class="signoff reveal">HELLO, COMETEER.</div>
+      </div>
+
+      <div class="trail-footer">A concept launch page. Not affiliated with Comet — all product names belong to wearcomet.com.</div>
+    </div>
+  </section>
+
+  <!-- Lenis smooth scroll + Three.js -->
+  <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/three@0.149.0/build/three.min.js"></script>
+  <!-- cannon-es is ESM-only: republish onto window for physics-play.js -->
+  <script type="module">
+    import * as CANNON from "https://unpkg.com/cannon-es@0.20.0/dist/cannon-es.js";
+    window.CANNON = CANNON;
+    window.dispatchEvent(new Event("cannon-ready"));
+  </script>
+
+  <script>
+    window.SCRUB_SECTIONS = [
+      {
+        section: "#launch",
+        frameCount: 179, /* set from extract-frames.sh output */
+        bg: "#070b14",
+        framePath: (i) => `frames/launch/frame_${String(i).padStart(4, "0")}.jpg`,
+      },
+      {
+        section: "#descent",
+        frameCount: 179, /* set from extract-frames.sh output */
+        bg: "#070b14",
+        framePath: (i) => `frames/descent/frame_${String(i).padStart(4, "0")}.jpg`,
+      },
+    ];
+
+    window.WORLD_SECTIONS = [
+      {
+        section: "#moonwalk",
+        motion: "moonwalk",
+        palette: { bg: "#070b14", accent: "#9fc2e8" },
+      },
+    ];
+
+    window.HYBRID_SECTIONS = [
+      {
+        section: "#details",
+        motion: "moon",
+        palette: { bg: "#070b14", accent: "#9fc2e8", surface: "#c9ced8" },
+      },
+    ];
+
+    window.EXPLORE_SECTIONS = [
+      {
+        section: "#explore",
+        palette: { bg: "#070b14", accent: "#9fc2e8" },
+        frameCount: 179,
+        framePath: (i) => `frames/launch/frame_${String(i).padStart(4, "0")}.jpg`,
+        waypoints: [
+          { id: "upper", label: "UPPER", frame: 25,
+            caption: "Icy suede over open mesh — the Blue Ice upper breathes like thin lunar air." },
+          { id: "laces", label: "LACES", frame: 70,
+            caption: "Flat lunar laces with a drift-proof lock — tied once, tied for the mission." },
+          { id: "sole", label: "SOLE", frame: 115,
+            caption: "Gum-cream stack, cushioning tuned for float. 0.16 G underfoot, every day." },
+          { id: "heel", label: "HEEL", frame: 155,
+            caption: "Suede heel counter, sun at its back — the only flag we plant." },
+        ],
+      },
+    ];
+
+    window.PHYSICS_SECTIONS = [
+      {
+        section: "#gravity",
+        palette: { bg: "#070b14", accent: "#9fc2e8" },
+        objectCount: 6,
+      },
+    ];
+
+    window.TRAIL_SECTIONS = [
+      {
+        section: "#get-them",
+        palette: { bg: "#070b14", accent: "#9fc2e8" },
+        particleCount: 160,
+      },
+    ];
+  </script>
+
+  <script src="choreography.js"></script>
+  <script src="scroll-cinematic.js"></script>
+  <script src="scroll-world.js"></script>
+  <script src="hybrid-2d3d.js"></script>
+  <script src="click-navigate.js"></script>
+  <script src="physics-play.js"></script>
+  <script src="cursor-trail.js"></script>
+</body>
+</html>
