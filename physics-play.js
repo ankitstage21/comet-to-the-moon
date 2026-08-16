@@ -94,9 +94,9 @@ function startPhysicsSection(cfg) {
   // --- The X-Low itself: stylized mini sneaker on a box body ---
   function buildMiniSneaker() {
     const g = new THREE.Group();
-    const ice = new THREE.MeshStandardMaterial({ color: "#cfe0f2", roughness: 0.75 });
-    const iceDeep = new THREE.MeshStandardMaterial({ color: accent, roughness: 0.7 });
-    const gum = new THREE.MeshStandardMaterial({ color: "#d9c9a8", roughness: 0.9 });
+    const ice = new THREE.MeshStandardMaterial({ color: "#eef3f9", roughness: 0.7 });
+    const iceDeep = new THREE.MeshStandardMaterial({ color: "#4b4e57", roughness: 0.85 });
+    const gum = new THREE.MeshStandardMaterial({ color: "#7db3e8", roughness: 0.85 });
     const white = new THREE.MeshStandardMaterial({ color: "#eef1f6", roughness: 0.6 });
 
     const sole = new THREE.Mesh(new THREE.BoxGeometry(2.3, 0.18, 0.85), gum);
@@ -128,7 +128,7 @@ function startPhysicsSection(cfg) {
     tongue.rotation.z = -0.3;
     g.add(tongue);
     for (let i = 0; i < 3; i++) {
-      const lace = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.045, 0.6), white);
+      const lace = new THREE.Mesh(new THREE.BoxGeometry(0.07, 0.045, 0.6), new THREE.MeshStandardMaterial({ color: accent, roughness: 0.6 }));
       lace.position.set(0.42 - i * 0.28, 0.36 - i * 0.09, 0);
       lace.rotation.z = -0.3;
       g.add(lace);

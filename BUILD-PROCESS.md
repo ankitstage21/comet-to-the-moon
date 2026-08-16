@@ -161,6 +161,27 @@ stale first-frame canvas that looked broken. Fixes:
 loop, never from scroll events** — events miss anchor jumps, mid-section
 landings, and restored scroll positions.
 
+## Phase 9 — "You changed the product" (third review round)
+
+The user posted the real product photos: the actual X-Low "To The Moon" has
+dark starfield-dot panels, a white four-pointed comet star logo, sky-blue
+laces, a silver COMET heel tab, and a blue camo outsole. My generated shoe was
+a plausible-but-wrong generic pale-blue low-top — generated from a text
+description alone.
+
+Fix: pulled the real product gallery straight from Shopify's JSON endpoint
+(`/products/x-lows-to-the-moon.js` — the HTML hides the gallery behind JS, the
+JSON endpoint doesn't), imported two photos into Higgsfield via
+`media_import_url`, and regenerated both keyframes and both clips **with the
+product photos attached as reference images** and the prompt ordering "keep
+every design detail identical to the references." Copy and the physics
+mini-model were updated to match (starfield-dot panels / camo outsole, no more
+invented "Blue Ice suede / gum-cream sole").
+
+**Rule extracted: never generate a real product from a text description — always
+attach the actual product photos as references from the first keyframe.** Text
+gets you a plausible product; references get you the product.
+
 ## Final state
 
 - 7 sections, all verified with pixel sampling + screenshots; zero console errors.

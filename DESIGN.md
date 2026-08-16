@@ -31,6 +31,18 @@ Fonts: **Space Grotesk** (display/HUD), **Inter** (body). Loaded from Google Fon
 
 Zero plan deviations. Both Higgsfield clips rendered on the first attempt.
 
+## Product-accuracy fix (2026-08-16)
+
+User review: the generated shoe was a generic pale-blue low-top, not the real
+X-Low "To The Moon" (white/ice body, dark starfield-dot panels, white
+four-point comet star logo, sky-blue laces, silver COMET heel tab, blue camo
+outsole). Fix: imported the actual product photos from wearcomet.com's Shopify
+CDN into Higgsfield as reference images and regenerated both keyframes and both
+clips with the references attached ("keep every design detail identical").
+Copy updated to match the real shoe (no more "Blue Ice suede / gum-cream sole");
+physics mini-model recolored (dark panel, blue laces/sole). Second generation
+round: ~112 additional credits.
+
 ## Generated assets
 
 - Keyframe 1 (hero): nano_banana_2, job `8a4f45e1…` — sneaker floating over lunar
