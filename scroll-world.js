@@ -42,7 +42,7 @@ function buildGeometry(motion, palette) {
       terrainGeo.computeVertexNormals();
       const terrain = new THREE.Mesh(
         terrainGeo,
-        new THREE.MeshStandardMaterial({ color: "#565e6e", roughness: 1, metalness: 0, flatShading: true })
+        new THREE.MeshStandardMaterial({ color: "#7a828f", roughness: 1, metalness: 0, flatShading: true })
       );
       terrain.position.y = -3;
       terrain.position.z = -40;
@@ -70,10 +70,9 @@ function buildGeometry(motion, palette) {
       earthCanvas.width = earthCanvas.height = 256;
       const ec = earthCanvas.getContext("2d");
       const grad = ec.createRadialGradient(96, 88, 20, 128, 128, 150);
-      grad.addColorStop(0, "#b8d8fa");
-      grad.addColorStop(0.45, "#6ea3ec");
-      grad.addColorStop(0.8, "#2f5aa8");
-      grad.addColorStop(1, "#16305e");
+      grad.addColorStop(0, "#c2defb");
+      grad.addColorStop(0.5, "#79aaee");
+      grad.addColorStop(1, "#4f81cd");
       ec.fillStyle = grad;
       ec.fillRect(0, 0, 256, 256);
       // faint cloud swirls
@@ -94,13 +93,21 @@ function buildGeometry(motion, palette) {
       earth.position.set(-42, 30, -140);
       earth.userData.excludeFog = true;
       group.add(earth);
-      const glow = new THREE.Mesh(
-        new THREE.SphereGeometry(11, 32, 32),
-        new THREE.MeshBasicMaterial({
-          color: "#7fb2f0", transparent: true, opacity: 0.22, fog: false,
-          blending: THREE.AdditiveBlending, depthWrite: false,
-        })
-      );
+      // soft radial halo — a sprite with gradient falloff, not a hard-edged shell
+      const glowCanvas = document.createElement("canvas");
+      glowCanvas.width = glowCanvas.height = 128;
+      const gc = glowCanvas.getContext("2d");
+      const gg = gc.createRadialGradient(64, 64, 22, 64, 64, 64);
+      gg.addColorStop(0, "rgba(127,178,240,0.55)");
+      gg.addColorStop(0.5, "rgba(127,178,240,0.18)");
+      gg.addColorStop(1, "rgba(127,178,240,0)");
+      gc.fillStyle = gg;
+      gc.fillRect(0, 0, 128, 128);
+      const glow = new THREE.Sprite(new THREE.SpriteMaterial({
+        map: new THREE.CanvasTexture(glowCanvas),
+        transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, fog: false,
+      }));
+      glow.scale.set(40, 40, 1);
       glow.position.copy(earth.position);
       group.add(glow);
       break;
@@ -141,11 +148,11 @@ function initWorld(cfg) {
   scene.add(group);
 
   // low-angle sun: long shadows, high contrast — night-side moon mood
-  const key = new THREE.DirectionalLight(0xfff4e0, 0.85);
-  key.position.set(40, 10, 5);
-  const rim = new THREE.DirectionalLight(cfg.palette?.accent || "#9fc2e8", 0.35);
-  rim.position.set(-25, 6, -30);
-  const fill = new THREE.AmbientLight(0x33415e, 0.35);
+  const key = new THREE.DirectionalLight(0xfff2dd, 1.35);
+  key.position.set(40, 22, 8);
+  const rim = new THREE.DirectionalLight(cfg.palette?.accent || "#9fc2e8", 0.4);
+  rim.position.set(-25, 8, -30);
+  const fill = new THREE.AmbientLight(0x46536e, 0.5);
   scene.add(key, rim, fill);
 
   const camera = new THREE.PerspectiveCamera(52, 1, 0.1, 300);
