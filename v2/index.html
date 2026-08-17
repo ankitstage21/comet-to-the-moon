@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Comet X-Lows — To The Moon</title>
+<meta name="description" content="The X-Lows: To The Moon. ₹5,899. Sold out — join the waitlist for the restock." />
+<meta name="robots" content="noindex, nofollow" />
+
+<!-- Fonts: preconnect + display=swap so text never blocks paint -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<!-- LCP image gets an explicit preload; nothing else does -->
+<link rel="preload" as="image" href="assets/poster.avif" type="image/avif" fetchpriority="high" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header class="bar">
+  <span class="brand">COMET <i>✦</i></span>
+  <a class="bar-cta" href="#waitlist" data-ev="nav_cta">JOIN WAITLIST</a>
+</header>
+
+<!-- ══ 1 · HERO — one viewport, everything above the fold ══ -->
+<section class="hero" id="hero" data-section="hero">
+  <picture class="hero-img">
+    <source srcset="assets/poster.avif" type="image/avif" />
+    <img src="assets/poster.jpg" alt="Comet X-Lows To The Moon, white and ice-blue low-top sneaker on the lunar surface"
+         width="1080" height="608" fetchpriority="high" decoding="sync" />
+  </picture>
+
+  <div class="hero-body">
+    <span class="flag">NEW LAUNCH · SOLD OUT</span>
+    <h1>X-LOWS<br /><em>To The Moon</em></h1>
+    <p class="price">₹5,899 <span>MRP incl. taxes</span></p>
+    <p class="sub">Starfield panels, the comet star, blue camo outsole. UK&nbsp;3–12.</p>
+    <a class="btn primary" href="#waitlist" data-ev="hero_cta">GET RESTOCK ALERT</a>
+    <ul class="trust">
+      <li>✓ COD available</li>
+      <li>✓ 7-day returns</li>
+      <li>✓ Free shipping ₹999+</li>
+    </ul>
+  </div>
+  <span class="scroll-cue">SCROLL</span>
+</section>
+
+<!-- ══ 2 · INTERACTIVE 3D — the objection-removal block (313KB) ══ -->
+<section class="block" id="spin" data-section="spin">
+  <div class="wrap">
+    <span class="kicker">SEE ALL OF IT</span>
+    <h2>Spin it yourself.</h2>
+    <p class="lead">Every angle, before you commit. Drag to rotate — check the sole,
+      the heel tab, the star.</p>
+
+    <div class="viewer" id="viewer">
+      <canvas id="glcanvas"></canvas>
+      <div class="viewer-hint" id="viewerHint">DRAG TO ROTATE</div>
+      <div class="viewer-fallback" id="viewerFallback" hidden>
+        <picture>
+          <source srcset="assets/poster.avif" type="image/avif" />
+          <img src="assets/poster.jpg" alt="Comet X-Lows To The Moon" width="1080" height="608" loading="lazy" />
+        </picture>
+      </div>
+      <button class="viewer-reset" id="viewerReset" type="button" data-ev="model_reset" hidden>RESET VIEW</button>
+    </div>
+
+    <div class="chips" id="angleChips">
+      <button class="chip" data-az="0"   data-ev="model_angle_side">SIDE</button>
+      <button class="chip" data-az="315" data-ev="model_angle_heel">HEEL</button>
+      <button class="chip" data-az="180" data-ev="model_angle_medial">INNER</button>
+      <button class="chip" data-az="0" data-el="-80" data-ev="model_angle_sole">SOLE</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3 · SPECS ══ -->
+<section class="block tint" id="specs" data-section="specs">
+  <div class="wrap">
+    <span class="kicker">THE DETAILS</span>
+    <h2>Built like the sky it's named for.</h2>
+    <dl class="specs">
+      <div><dt>Colourway</dt><dd>To The Moon — charcoal starfield panels over white and ice blue</dd></div>
+      <div><dt>Signature</dt><dd>White four-point comet star, silver COMET heel tab</dd></div>
+      <div><dt>Outsole</dt><dd>Blue-and-white camo tread</dd></div>
+      <div><dt>Sizes</dt><dd>UK 3–12 · EUR 35.5–46 · 22.5–29.7&nbsp;cm</dd></div>
+      <div><dt>Price</dt><dd>₹5,899 MRP, inclusive of taxes</dd></div>
+    </dl>
+    <div class="stats">
+      <div><b data-count="40" data-suffix="+">0</b><span>COSMIC COLOURWAYS</span></div>
+      <div><b data-count="10">0</b><span>UK SIZES</span></div>
+      <div><b data-count="7">0</b><span>DAY RETURNS</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 4 · CINEMATIC — the one desire moment, on a diet ══ -->
+<section class="cine" id="cinematic" data-section="cinematic">
+  <div class="cine-stick">
+    <canvas id="scrub"></canvas>
+    <div class="cine-veil"></div>
+    <div class="cine-copy">
+      <h2 class="line" data-in="0.02" data-out="0.42">ONE SMALL STEP<br />FOR SNEAKERS.</h2>
+      <h2 class="line" data-in="0.48" data-out="1.25">MADE FOR THE<br />COMETEERS.</h2>
+    </div>
+    <span class="cine-meta" id="cineMeta"></span>
+  </div>
+</section>
+
+<!-- ══ 5 · FIT — the #1 footwear objection ══ -->
+<section class="block" id="fit" data-section="fit">
+  <div class="wrap">
+    <span class="kicker">GET THE SIZE RIGHT</span>
+    <h2>Runs true to size.</h2>
+    <p class="lead">Measure your foot heel-to-toe and match the cm column. Between
+      sizes? Take the larger — the toe box is snug.</p>
+    <div class="tablewrap">
+      <table class="sizes">
+        <thead><tr><th>UK</th><th>EUR</th><th>Foot length</th></tr></thead>
+        <tbody>
+          <tr><td>3</td><td>35.5</td><td>22.5 cm</td></tr>
+          <tr><td>4</td><td>37</td><td>23.4 cm</td></tr>
+          <tr><td>5</td><td>38</td><td>24.1 cm</td></tr>
+          <tr><td>6</td><td>39.5</td><td>25.0 cm</td></tr>
+          <tr><td>7</td><td>41</td><td>25.9 cm</td></tr>
+          <tr><td>8</td><td>42</td><td>26.7 cm</td></tr>
+          <tr><td>9</td><td>43.5</td><td>27.4 cm</td></tr>
+          <tr><td>10</td><td>44.5</td><td>28.2 cm</td></tr>
+          <tr><td>11</td><td>45.5</td><td>29.0 cm</td></tr>
+          <tr><td>12</td><td>46</td><td>29.7 cm</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">Free size exchange on your first order.</p>
+  </div>
+</section>
+
+<!-- ══ 6 · PROOF — structure only; real data must come from the brand ══ -->
+<section class="block tint" id="proof" data-section="proof">
+  <div class="wrap">
+    <span class="kicker">FROM THE COMETEERS</span>
+    <h2>What people say.</h2>
+    <!-- PLACEHOLDER: wire to the store's real review source (Judge.me / Loox /
+         Shopify Reviews) and real UGC. Never ship invented reviews or ratings. -->
+    <div class="ph-note">Placeholder — connect real reviews &amp; UGC before launch</div>
+    <div class="proof-grid">
+      <div class="ph-card"><span>★★★★★</span><p>Review slot</p><small>Verified buyer</small></div>
+      <div class="ph-card"><span>★★★★★</span><p>Review slot</p><small>Verified buyer</small></div>
+      <div class="ph-card"><span>UGC</span><p>Customer photo / reel</p><small>@handle</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 7 · WAITLIST — the actual conversion event ══ -->
+<section class="block" id="waitlist" data-section="waitlist">
+  <div class="wrap narrow">
+    <span class="kicker">SOLD OUT · RESTOCK ALERT</span>
+    <h2>Be first when they land.</h2>
+    <p class="lead">Pick your size so we know how many to make. We'll ping you the
+      moment it's back — nothing else.</p>
+
+    <form id="wl" novalidate>
+      <fieldset class="sizepick">
+        <legend>Your size (UK)</legend>
+        <div class="sizegrid" id="sizeGrid"></div>
+      </fieldset>
+
+      <label class="field">
+        <span>WhatsApp number</span>
+        <input type="tel" name="phone" inputmode="tel" autocomplete="tel"
+               placeholder="+91 " />
+      </label>
+      <p class="orline">or</p>
+      <label class="field">
+        <span>Email</span>
+        <input type="email" name="email" autocomplete="email" placeholder="you@email.com" />
+      </label>
+
+      <button class="btn primary wide" type="submit" data-ev="waitlist_submit">NOTIFY ME</button>
+      <p class="fine" id="wlMsg" role="status"></p>
+      <p class="fine">
+        Demo form — not connected to any backend, nothing is sent or stored.
+        Wire to Shopify/Klaviyo/WhatsApp Business before launch.
+      </p>
+    </form>
+  </div>
+</section>
+
+<footer class="foot">
+  <p><a href="https://www.wearcomet.com/products/x-lows-to-the-moon" target="_blank" rel="noopener" data-ev="footer_out">View on wearcomet.com ↗</a></p>
+  <p class="fine">Concept landing page built for a performance study. Not affiliated
+    with Comet — product names and marks belong to wearcomet.com.</p>
+</footer>
+
+<!-- Sticky action bar — the ask is reachable at every scroll depth -->
+<div class="dock" id="dock">
+  <div class="dock-info"><b>X-Lows · To The Moon</b><span>₹5,899 · sold out</span></div>
+  <a class="btn primary" href="#waitlist" data-ev="dock_cta">NOTIFY ME</a>
+</div>
+
+<!-- Perf HUD (dev only) — real weight, live -->
+<button class="hud-toggle" id="hudToggle" type="button" title="performance">⚡</button>
+<div class="hud" id="hud" hidden></div>
+
+<script type="importmap">
+{ "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
