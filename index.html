@@ -72,8 +72,8 @@
     </div>
   </section>
 
-  <!-- ============ SECTION 3: MOONWALK (scroll-world, procedural) ============ -->
-  <section class="world" id="moonwalk">
+  <!-- ============ SECTION 3: MOONWALK (scroll-cinematic, low-gravity strides) ============ -->
+  <section class="cinematic" id="moonwalk">
     <div class="sticky">
       <canvas></canvas>
       <div class="vignette"></div>
@@ -188,13 +188,11 @@
         bg: "#070b14",
         framePath: (i) => `frames/descent/frame_${String(i).padStart(4, "0")}.jpg`,
       },
-    ];
-
-    window.WORLD_SECTIONS = [
       {
         section: "#moonwalk",
-        motion: "moonwalk",
-        palette: { bg: "#070b14", accent: "#9fc2e8" },
+        frameCount: 179, /* set from extract-frames.sh output */
+        bg: "#070b14",
+        framePath: (i) => `frames/moonwalk/frame_${String(i).padStart(4, "0")}.jpg`,
       },
     ];
 
@@ -244,7 +242,6 @@
 
   <script src="choreography.js"></script>
   <script src="scroll-cinematic.js"></script>
-  <script src="scroll-world.js"></script>
   <script src="hybrid-2d3d.js"></script>
   <script src="click-navigate.js"></script>
   <script src="physics-play.js"></script>

@@ -23,13 +23,13 @@ Fonts: **Space Grotesk** (display/HUD), **Inter** (body). Loaded from Google Fon
 |---|----|-----|-------------------|-----------------|-----------|
 | 1 | `launch` | Launch | scroll-cinematic (orbit) | scroll-cinematic (orbit) | — |
 | 2 | `descent` | Descent | scroll-cinematic (descent) | scroll-cinematic (descent) | — |
-| 3 | `moonwalk` | Moonwalk | scroll-world (procedural) | scroll-world (procedural) | — |
+| 3 | `moonwalk` | Moonwalk | scroll-world (procedural) | scroll-cinematic (strides) | Replaced 2026-08-17: low-poly terrain clashed with the photoreal sections (user-flagged); now a third generated clip |
 | 4 | `details` | Details | hybrid-2d3d (moon object) | hybrid-2d3d (moon object) | — |
 | 5 | `explore` | Explore | click-navigate (4 waypoints) | click-navigate (4 waypoints) | — |
 | 6 | `gravity` | Gravity | physics-play (low-gravity) | physics-play (low-gravity) | — |
 | 7 | `get-them` | Get Them | cursor-trail (stardust CTA) | cursor-trail (stardust CTA) | — |
 
-Zero plan deviations. Both Higgsfield clips rendered on the first attempt.
+One post-launch deviation (moonwalk, see table). All Higgsfield clips rendered on the first attempt.
 
 ## Product-accuracy fix (2026-08-16)
 
